@@ -22,6 +22,26 @@ ID: Unique ID
 
 Segmentation: Predicted segment for customers in the test set
 
+### Feature Engineering
+
+#### Handling missing values:
+
+- Graduated -> Based on assumption ( if homemaker, not graduated or graduated)
+
+- Ever Married -> Based on assumption ( if person is less than 35 they are not married ever or they have been married/sepreated now)
+
+- Family_size  -> Looks reasonable to fill with the median value(3)
+
+- Proffession and Var_1 -> 2 assumption
+                        ->Both cannot be filled based on assumption as it require mose intution of the data ( so for the time sake I'm dropping the nan)
+                        -> Filling with forwardfill,backwardfill to avoid the variation in the importance
+
+#### Dummies/Label_Encoding
+
+- Manual Encoding for -> Gender,Ever_Married,Graduated,Spending_score,Var_1(As it was better than dummies or label encoding because of the ordianl manual mapping)
+
+-
+
 ### Evaluation Metric
 
 The evaluation metric for this hackathon is Accuracy Score.
