@@ -35,14 +35,20 @@ Segmentation: Predicted segment for customers in the test set
 - Proffession and Var_1 -> 2 assumption
                         ->Both cannot be filled based on assumption as it require mose intution of the data ( so for the time sake I'm dropping the nan)
                         -> Filling with forwardfill,backwardfill to avoid the variation in the importance
+- Work Experience  -> KNN imputer 
+                   -> Due to more number of null values rather than assumption going for KNN imputer to fill the NAN values
 
 #### Dummies/Label_Encoding
 
-- Manual Encoding for -> Gender,Ever_Married,Graduated,Spending_score,Var_1(As it was better than dummies or label encoding because of the ordianl manual mapping)
-
--
+- Manual Encoding -> Gender,Ever_Married,Graduated,Spending_score,Var_1(As it was better than dummies or label encoding because of the ordinal manual mapping)
 
 ### Evaluation Metric
 
 The evaluation metric for this hackathon is Accuracy Score.
 
+### Model and their Performance
+
+<img src= "images/Model.PNG" width='400'>
+
+- Overall XG boost perfromed best in the evaluation metric
+- Yet, when executing the new variables from the test, Random Forest provided greater accuracy_metric.
